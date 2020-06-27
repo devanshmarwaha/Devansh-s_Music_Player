@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-169377748-1"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+
+        function gtag() {
+            dataLayer.push(arguments);
+        }
+        gtag('js', new Date());
+
+        gtag('config', 'UA-169377748-2');
+    </script>
+
+    <title>Music Player</title>
+    <style>
+        #music_home {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: row;
+            margin-top: 0%;
+            flex-wrap: wrap;
+        }
+        
+        #music_home img {
+            width: 120px;
+            height: 120px;
+            margin: 10px;
+            border-radius: 15px;
+            box-shadow: 10px 10px 20px #bebebe, -10px -10px 20px #ffffff;
+            transition: transform .2s;
+        }
+        
+        #music_home img:hover {
+            transform: scale(1.2);
+            cursor: pointer;
+            outline: none;
+        }
+        
+        h1 {
+            font-weight: lighter;
+            color: cornsilk;
+            background: linear-gradient(to right, rgb(86, 86, 165), rgb(99, 174, 250));
+            width: 320px;
+            padding: 5px;
+            border-radius: 15px;
+        }
+        
+        #player {
+            width: 320px;
+            height: 340px;
+            background: linear-gradient(to right, lightblue, dodgerblue);
+            border-radius: 15px;
+            display: none;
+        }
+        
+        .images img {
+            width: 190px;
+            height: 190px;
+            align: center;
+            margin-top: 1em;
+            display: none;
+            border-radius: 25px;
+            padding: 10px
+        }
+        
+        .music audio {
+            display: none;
+            width: 250px;
+            height: 35px;
+            outline: none;
+            margin-top: -0.2em;
+        }
+        
+        #song_name {
+            display: none;
+            margin-top: 0.3em;
+            font-size: 25px;
+            color: cornsilk;
+            background-color: blue;
+            border-radius: 15px;
+            padding: 5px;
+            width: 250px;
+        }
+        
+        .imgs {
+            width: 70px;
+            height: 60px;
+            display: block;
+        }
+        
+        .info {
+            word-spacing: 1px;
+            background-color: none;
+            text-align: center;
+            margin-bottom: 0.5em;
+            word-spacing: 0px;
+        }
+        
+        .info p {
+            margin: -0.1em;
+            font-style: italic;
+            word-spacing: 0px;
+            font-size: 15px;
+        }
+        
+        .info a {
+            margin: 0.3em;
+            transition: transform .2s;
+        }
+        
+        .info a:hover {
+            transmorm: scale(1.2) outline: none
+        }
+        
+        footer {}
+    </style>
+    <script>
+        function song1() {
+            document.getElementById("img1").style.display = "block";
+            document.getElementById("img2").style.display = "none";
+            document.getElementById("img3").style.display = "none";
+            document.getElementById("img4").style.display = "none";
+            document.getElementById("music1").style.display = "block";
+            document.getElementById("music1").play();
+            document.getElementById("music2").style.display = "none";
+            document.getElementById("music2").pause();
+            document.getElementById("music3").pause();
+            document.getElementById("music3").style.display = "none";
+            document.getElementById("song_name").style.display = "block";
+            document.getElementById("song_name").innerHTML = "♫ Fillhall";
+            document.getElementById("player").style.display = "block";
+            document.getElementById("music4").pause();
+            document.getElementById("music4").style.display = "none";
+        }
+
+        function song2() {
+            document.getElementById("img1").style.display = "none";
+            document.getElementById("img2").style.display = "block";
+            document.getElementById("img3").style.display = "none";
+            document.getElementById("img4").style.display = "none";
+            document.getElementById("music1").style.display = "none";
+            document.getElementById("music1").pause();
+            document.getElementById("music2").style.display = "block";
+            document.getElementById("music2").play();
+            document.getElementById("music3").pause();
+            document.getElementById("music3").style.display = "none";
+            document.getElementById("player").style.display = "block";
+            document.getElementById("song_name").style.display = "block";
+            document.getElementById("song_name").innerHTML = "♫ Besabriyaan";
+            document.getElementById("music4").pause();
+            document.getElementById("music4").style.display = "none";
+        }
+
+        function song3() {
+            document.getElementById("img1").style.display = "none";
+            document.getElementById("img2").style.display = "none";
+            document.getElementById("img3").style.display = "block";
+            document.getElementById("img4").style.display = "none";
+            document.getElementById("music1").style.display = "none";
+            document.getElementById("music1").pause();
+            document.getElementById("music2").style.display = "none";
+            document.getElementById("music2").pause();
+            document.getElementById("music3").play();
+            document.getElementById("music3").style.display = "block";
+            document.getElementById("player").style.display = "block";
+            document.getElementById("song_name").style.display = "block";
+            document.getElementById("song_name").innerHTML = "♫ Kaun Tujhe";
+            document.getElementById("music4").pause();
+            document.getElementById("music4").style.display = "none";
+        }
+
+
+        function song4() {
+            document.getElementById("img1").style.display = "none";
+            document.getElementById("img2").style.display = "none";
+            document.getElementById("img3").style.display = "none";
+            document.getElementById("img4").style.display = "block";
+            document.getElementById("music1").style.display = "none";
+            document.getElementById("music1").pause();
+            document.getElementById("music2").style.display = "none";
+            document.getElementById("music2").pause();
+            document.getElementById("music3").pause();
+            document.getElementById("music3").style.display = "none";
+            document.getElementById("player").style.display = "block";
+            document.getElementById("song_name").style.display = "block";
+            document.getElementById("song_name").innerHTML = "♫ Teri Mitti";
+            document.getElementById("music4").play();
+            document.getElementById("music4").style.display = "block";
+
+
+        }
+    </script>
+</head>
+
+<body>
+    <center>
+        <h1>Music player</h1>
+        <div id="music_home">
+
+            <img src="image1.jpg" onclick="song1()">
+            <img src="image3.jpg" onclick="song2()">
+            <img src="image2.jpg" onclick="song3()">
+            <img src="image4.jpg" onclick="song4()">
+        </div>
+
+        <div id="player">
+            <div class="images">
+                <img src="image1.jpg" id="img1">
+                <img src="image3.jpg" id="img3">
+                <img src="image2.jpg" id="img2">
+                <img src="image4.jpg" id="img4">
+            </div>
+            <div class="music">
+                <audio src="fillhaal.mp3" controls id="music1"></audio>
+                <audio src="Besabriyaan.mp3" controls id="music2"></audio>
+                <audio src="kaun_tujhe.mp3" controls id="music3"></audio>
+                <audio src="teri_mitti.mp3" controls id="music4"></audio>
+            </div>
+            <div id=song_name>
+            </div>
+            <img class="imgs" src="loading.svg">
+        </div>
+        <footer>
+            <center>
+                <div class="info"><br>
+                    <p>Contact Me:-</p>
+                    <a href="mailto:devansh.marwaha400@gmail.com"><i class="fa fa-at" style="font-size:26px;color:black"></i></a>
+                    <a href="tel:8968096689"><i class="fa fa-phone" style="font-size:26px;color:black"></i></a>
+                    <a class="lol" href="https://github.com/devanshmarwaha"><i class="fa fa-github" style="font-size:26px;color:black"></i></a>
+                    <a href="https://www.linkedin.com/in/devansh-marwaha-a548b918b"><i class="fa fa-linkedin" style="font-size:26px;color:black"></i></a>
+                    <a href="http://instagram.com/devansh._.marwaha"><i class="fa fa-instagram" style="font-size:26px;color:black"></i></a>
+                    <p>Made By Devansh Marwaha</p>
+                </div>
+            </center>
+        </footer>
+    </center>
+</body>
+
+</html>
