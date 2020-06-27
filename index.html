@@ -92,30 +92,86 @@
         }
         
         .info {
-            word-spacing: 1px;
             background-color: none;
             text-align: center;
-            margin-bottom: 0.5em;
-            word-spacing: 0px;
+            margin-bottom: 0em;
+            word-spacing: -2px;
         }
         
         .info p {
-            margin: -0.1em;
+            margin: 0em;
             font-style: italic;
             word-spacing: 0px;
             font-size: 15px;
         }
         
         .info a {
-            margin: 0.3em;
-            transition: transform .2s;
+            margin: 0em;
         }
         
-        .info a:hover {
-            transmorm: scale(1.2) outline: none
+        .fa {
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            border-radius: 50%;
         }
         
-        footer {}
+        .fa-linkedin {
+            background-color: rgb(40, 103, 178);
+            color: white;
+        }
+        
+        .fa-linkedin:hover {
+            background-color: cornsilk;
+            color: blue
+        }
+        
+        .fa-instagram {
+            background-color: rgb(214, 104, 41);
+            color: white;
+        }
+        
+        .fa-instagram:hover {
+            background-color: cornsilk;
+            color: orangered
+        }
+        
+        .fa-github {
+            background-color: rgb(50, 51, 53);
+            color: white;
+        }
+        
+        .fa-github:hover {
+            background-color: cornsilk;
+            color: rgb(11, 11, 14)
+        }
+        
+        .fa-at {
+            background-color: rgb(224, 32, 32);
+            color: white;
+        }
+        
+        .fa-at:hover {
+            background-color: cornsilk;
+            color: rgb(241, 22, 22)
+        }
+        
+        .fa-phone {
+            background-color: rgb(23, 146, 54);
+            color: white;
+        }
+        
+        .fa-phone:hover {
+            background-color: cornsilk;
+            color: rgb(32, 155, 42)
+        }
+        
+        #footer {
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+            display: block;
+        }
     </style>
     <script>
         function song1() {
@@ -134,6 +190,7 @@
             document.getElementById("player").style.display = "block";
             document.getElementById("music4").pause();
             document.getElementById("music4").style.display = "none";
+            document.getElementById("footer").style.position = "relative";
         }
 
         function song2() {
@@ -152,6 +209,7 @@
             document.getElementById("song_name").innerHTML = "♫ Besabriyaan";
             document.getElementById("music4").pause();
             document.getElementById("music4").style.display = "none";
+            document.getElementById("footer").style.position = "relative";
         }
 
         function song3() {
@@ -170,6 +228,7 @@
             document.getElementById("song_name").innerHTML = "♫ Kaun Tujhe";
             document.getElementById("music4").pause();
             document.getElementById("music4").style.display = "none";
+            document.getElementById("footer").style.position = "relative";
         }
 
 
@@ -189,6 +248,7 @@
             document.getElementById("song_name").innerHTML = "♫ Teri Mitti";
             document.getElementById("music4").play();
             document.getElementById("music4").style.display = "block";
+            document.getElementById("footer").style.position = "relative";
 
 
         }
@@ -223,19 +283,19 @@
             </div>
             <img class="imgs" src="loading.svg">
         </div>
-        <footer>
+        <div id="footer">
             <center>
                 <div class="info"><br>
                     <p>Contact Me:-</p>
-                    <a href="mailto:devansh.marwaha400@gmail.com"><i class="fa fa-at" style="font-size:26px;color:black"></i></a>
-                    <a href="tel:8968096689"><i class="fa fa-phone" style="font-size:26px;color:black"></i></a>
-                    <a class="lol" href="https://github.com/devanshmarwaha"><i class="fa fa-github" style="font-size:26px;color:black"></i></a>
-                    <a href="https://www.linkedin.com/in/devansh-marwaha-a548b918b"><i class="fa fa-linkedin" style="font-size:26px;color:black"></i></a>
-                    <a href="http://instagram.com/devansh._.marwaha"><i class="fa fa-instagram" style="font-size:26px;color:black"></i></a>
+                    <a href="mailto:devansh.marwaha400@gmail.com"><i class="fa fa-at" style="font-size:15px;"></i></a>
+                    <a href="tel:8968096689"><i class="fa fa-phone" style="font-size:15px;"></i></a>
+                    <a class="lol" href="https://github.com/devanshmarwaha"><i class="fa fa-github" style="font-size:15px;"></i></a>
+                    <a href="https://www.linkedin.com/in/devansh-marwaha-a548b918b"><i class="fa fa-linkedin" style="font-size:15px;"></i></a>
+                    <a href="http://instagram.com/devansh._.marwaha"><i class="fa fa-instagram" style="font-size:15px;"></i></a>
                     <p>Made By Devansh Marwaha</p>
                 </div>
             </center>
-        </footer>
+        </div>
     </center>
 </body>
 
